@@ -5,7 +5,7 @@ import sky from './page/sky'
 import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import mainpage from "./page/mainpage";
-import login_registr from "./page/login_registr.jsx";
+import login from "./page/login.jsx";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
                     <Route path='/library' element={library()}/>
                     <Route path='/personal_account' element={personal_account()}/>
                     <Route path='/sky' element={sky()}/>
-                    <Route path='/login_registr' element={login_registr()}/>
+                    <Route path ='/login' element={login()}/>
                 </Routes>
             </div>
         </Router>

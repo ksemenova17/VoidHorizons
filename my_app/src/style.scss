@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,39 +9,40 @@
   font-style: normal;
 }
 
-body{
+body {
   overflow-x: hidden;
   margin: 0 20px;
   color: white;
   background-image: url(images/background.jpg);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Зафиксируем фоновое изображение */
+  background-attachment: fixed;
 }
-
-.container{
+.container {
   width: 100%;
   height: 100vh;
-  header{
+
+  header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100px;
     padding: 30px;
-    .nav{
+
+    .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      ul{
+
+      ul {
         width: 20%;
         height: 100vh;
         position: absolute;
         z-index: 10;
-        top:0;
+        top: 0;
         right: 0;
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(255, 255, 255, 0.1);
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -49,73 +51,107 @@ body{
         gap: 10px;
         backdrop-filter: blur(30px);
         transform: translateX(100%);
-        transition: transform 500ms ease-in-out;;
-        li{
+        transition: transform 500ms ease-in-out;
+
+        li {
           list-style: none;
           padding-block: 10px;
-          &.active{
+
+          &.active {
             border-right: 5px solid white;
           }
-          a{
+
+          a {
             text-decoration: none;
             color: white;
             font-size: 18px;
           }
         }
       }
-      .menu{
+
+      .menu {
         margin: 30px;
         position: absolute;
         z-index: 11;
-        top:0;
+        top: 0;
         right: 0;
       }
     }
-    .nav.show{
-      ul{
+
+    .nav.show {
+      ul {
         transform: translateX(0);
       }
     }
   }
-  .mainpage{
+  .mainpage {
     height: 100vh;
     width: 100%;
     display: flex;
     color: white;
-    .main-content{
+
+    .main-content {
       justify-content: center;
-      //align-items: center;
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      .main-content-title{
+      gap: 10px;
+
+      .main-content-title {
         font-family: "serpent", sans-serif;
+        font-size: 70px;
+      }
+
+      .main-content-subtitle-line1 {
         font-size: 60px;
       }
-      .main-content-subtitle{
-        font-size: 20px;
 
+      .main-content-subtitle-line2 {
+        font-size: 60px;
+        margin-inline-start: 60px;
       }
-      button{
-        background-color: transparent;
-        border: 1px solid white;
-        border-radius: 20px;
-        font-weight: 400;
-        font-size: 16px;
-        font-family: "Montserrat", sans-serif;
-        color: white;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        box-sizing: border-box;
-        transition: color 0.3s, background-color 0.3s;
-        &:hover {
-          background-color: white;
-          color: black;
-        }
+
+      .main-content-subtitle-line3 {
+        font-size: 60px;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 80%;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        background-color: white;
+        color: black;
       }
     }
   }
-  .login_registr{
-
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .wrapper {
+      background-color: aqua; // Задание фона для .wrapper
+      position: relative;
+      width: 420px;
+      height: 450px;
+      border-radius: 10px;
+      .form-box {
+        width: 100px;
+        padding: 40px;
+      }
+    }
   }
 }
+
