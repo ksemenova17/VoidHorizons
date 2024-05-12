@@ -16,17 +16,7 @@ function mainpage(){
                 <Link to="/login">
                     <button>регистрация</button>
                 </Link>
-
-                <h1 className="library">
-                    библиотека
-                </h1>
             </div>
-            {/*<div className="second_section">*/}
-            {/*    <h1 className="library">*/}
-            {/*        библиотека*/}
-            {/*    </h1>*/}
-
-            {/*</div>*/}
         </div>
     )
 }
