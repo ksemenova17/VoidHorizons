@@ -1,10 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { CiUser, CiLock, CiMail} from "react-icons/ci";
 import './login.scss'
 
 function login(){
+
+    const [action, setAction] = useState('')
+
+    const registerLink = () => {
+        setAction(' active')
+    };
+    const loginLink = () => {
+        setAction(' ')
+    };
+
     return(
-        <div className="wrapper">
+        <div className={`wrapper${action}`}>
             <div className="form-box login">
                 <form action="">
                     <h1>Вход</h1>
@@ -18,7 +28,7 @@ function login(){
                     </div>
                     <button type="submit">Войти</button>
                     <div className="register-link">
-                        <p>Ещё нет аккаунта? <a href="../register">Регистрация</a></p>
+                        <p>Ещё нет аккаунта? <a href="#" onClick={registerLink}>Регистрация</a></p>
                     </div>
                 </form>
             </div>
@@ -43,7 +53,7 @@ function login(){
                     </div>
                     <button type="submit">Регистрация</button>
                     <div className="register-link">
-                        <p>Уже есть аккаунт? <a href="../register">Войти</a></p>
+                        <p>Уже есть аккаунт? <a href="#" onClick={loginLink}>Войти</a></p>
                     </div>
                 </form>
             </div>

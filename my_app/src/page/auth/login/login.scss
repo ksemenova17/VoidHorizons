@@ -72,6 +72,8 @@ body {
     height: auto;
     background: rgba(255, 255, 255, 0.51);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
     .form-box {
         width: 100%;
         padding: 40px;
@@ -141,7 +143,17 @@ body {
                 }
             }
         }
+
     }
+    .register{
+        position:absolute;
+        translate: 400px;
+    }
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    translate: -400px;
 }
 
 @media screen and (max-width: 600px) {
