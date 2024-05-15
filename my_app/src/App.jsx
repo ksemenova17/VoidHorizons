@@ -5,7 +5,10 @@ import sky from './page/sky'
 import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import mainpage from "./page/mainpage";
-import login from "./page/login/login.jsx";
+import login from "./page/auth/login/login.jsx";
+import register from "./page/auth/register/register.jsx";
+
+
 
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
                     <Route path='/personal_account' element={personal_account()}/>
                     <Route path='/sky' element={sky()}/>
                     <Route path ='/login' element={login()}/>
+                    <Route path ='/register' element={register()}/>
                 </Routes>
             </div>
         </Router>
