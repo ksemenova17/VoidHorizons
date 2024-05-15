@@ -5,7 +5,7 @@ import sky from './page/sky'
 import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import mainpage from "./page/mainpage";
-import login from "./page/login.jsx";
+import login from "./page/login/login.jsx";
 
 
 function App() {
