@@ -6,7 +6,7 @@ import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import mainpage from "./page/mainpage";
 import login from "./page/auth/login/login.jsx";
-import register from "./page/auth/register/register.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 
 
 
@@ -14,17 +14,19 @@ import register from "./page/auth/register/register.jsx";
 function App() {
     return (
         <Router>
-            <div className="container">
-                <Navbar />
-                <Routes>
-                    <Route path='/' element={ mainpage()}/>
-                    <Route path='/library' element={library()}/>
-                    <Route path='/personal_account' element={personal_account()}/>
-                    <Route path='/sky' element={sky()}/>
-                    <Route path ='/login' element={login()}/>
-                    <Route path ='/register' element={register()}/>
-                </Routes>
-            </div>
+            {/*<Layout>*/}
+                <div className="container">
+                    <Navbar/>
+                    <Routes>
+                        <Route path='/' element={mainpage()}/>
+                        <Route path='/library' element={library()}/>
+                        <Route path='/personal_account' element={personal_account()}/>
+                        <Route path='/sky' element={sky()}/>
+                        <Route path='/login' element={login()}/>
+                    </Routes>
+                </div>
+            {/*</Layout>*/}
+
         </Router>
     );
 }
