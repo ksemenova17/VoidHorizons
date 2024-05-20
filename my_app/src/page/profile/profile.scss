@@ -1,0 +1,192 @@
+//.profile-page {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  min-height: 80vh;
+//  //background: rgba(0, 0, 0, 0.5);
+//  //border: 2px solid rgba(255, 255, 255, 0.58);
+//  //backdrop-filter: blur(30px);
+//
+//  .profile-container {
+//    padding: 20px;
+//    display: flex;
+//    gap: 20px;
+//    max-width: 1000px;
+//    width: 100%;
+//  }
+//
+//  .profile-picture {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    gap: 10px;
+//
+//    img {
+//      width: 150px;
+//      height: 150px;
+//      border-radius: 50%;
+//    }
+//
+//    .upload-button, .delete-button {
+//      background-color: #6e48aa;
+//      color: white;
+//      border: none;
+//      padding: 10px 20px;
+//      border-radius: 5px;
+//      cursor: pointer;
+//      font-size: 14px;
+//      display: flex;
+//      align-items: center;
+//      gap: 5px;
+//    }
+//
+//    .delete-button {
+//      background-color: #ff0000;
+//    }
+//
+//    .upload-button:hover, .delete-button:hover {
+//      opacity: 0.8;
+//    }
+//  }
+//
+//  .profile-form {
+//    display: flex;
+//    flex-wrap: wrap;
+//    gap: 20px;
+//    width: 100%;
+//
+//    .form-group {
+//      flex: 1 1 45%;
+//      display: flex;
+//      flex-direction: column;
+//
+//      label {
+//        margin-bottom: 5px;
+//        font-weight: bold;
+//      }
+//
+//      input {
+//        padding: 10px;
+//        border: 1px solid #ccc;
+//        border-radius: 5px;
+//        font-size: 14px;
+//      }
+//    }
+//
+//    .save-button {
+//      background: linear-gradient(135deg, #9D50BB, #6E48AA);
+//      color: white;
+//      border: none;
+//      padding: 10px 20px;
+//      border-radius: 5px;
+//      cursor: pointer;
+//      font-size: 16px;
+//      align-self: flex-end;
+//      margin-top: 20px;
+//    }
+//
+//    .save-button:hover {
+//      opacity: 0.8;
+//    }
+//  }
+//}
+
+
+.profile-page {
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 200px;
+
+  .profile-container {
+    background: rgba(0, 0, 0, 0.5); // Немного затемним фон для улучшения контраста
+    border: 2px solid rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(30px);
+    padding: 80px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 1400px;
+    height: calc(100vh - 60px);
+    position: relative;
+  }
+
+  .profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+
+    .upload-button, .delete-button {
+      background: linear-gradient(35deg, #ff1d74, #71519c);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .delete-button {
+      background-color: #ff0000;
+    }
+
+    .upload-button:hover, .delete-button:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding-top: 60px; /* Добавляем верхний padding для места под вылезающую картинку */
+
+    .form-group {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .save-button {
+      background: linear-gradient(135deg, #9D50BB, #6E48AA);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .save-button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+

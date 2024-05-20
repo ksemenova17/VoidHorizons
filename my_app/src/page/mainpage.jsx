@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import fact from "../images/home/fact.svg"
+import Facts from "../components/Facts/Facts.jsx";
 
 function mainpage(){
     return(
@@ -12,7 +13,7 @@ function mainpage(){
                 <p className="main-content-subtitle-line1">вселенная - это книга, </p>
                 <p className="main-content-subtitle-line2">наполненная неизведанными </p>
                 <p className="main-content-subtitle-line3">страницами. </p>
-                <img className="fact" src= {fact}/>
+                <Facts/>
                 <Link to="/login">
                     <button>регистрация</button>
                 </Link>

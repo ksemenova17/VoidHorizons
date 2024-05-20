@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0; // Можно добавить фоновый цвет для улучшения контраста
 }
 
 .wrapper {
@@ -156,11 +155,11 @@ body {
     transform: translateX(0);
 }
 
+
+
 @media screen and (max-width: 600px) {
     .wrapper {
         width: 100%;
-        height: auto; // Позволяет контейнеру адаптироваться к контенту на малых экранах
-        padding: 20px; // Добавим внутренние отступы для улучшения внешнего вида на малых экранах
     }
 
     .form-box {
@@ -191,11 +190,11 @@ body {
         }
 
         .agree, .register-link {
-            font-size: 12px; // Уменьшим размер текста
+            font-size: 12px;
         }
     }
 
     .wrapper.active {
-        height: auto; // Позволяет контейнеру адаптироваться к контенту на малых экранах
+        height: 520px;
     }
 }

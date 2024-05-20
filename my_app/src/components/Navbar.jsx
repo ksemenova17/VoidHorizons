@@ -13,7 +13,7 @@ function Navbar(){
                     <li className="active"><Link to='/'>Главная страница</Link></li>
                     <li><Link to='/library'>Библиотека</Link></li>
                     <li><Link to='/sky'>Ваше небо</Link></li>
-                    <li><Link to='/personal_account'>Личный кабинет</Link></li>
+                    <li><Link to='/profile'>Личный кабинет</Link></li>
                 </ul>
                 <div onClick={() => setOpen(!open)} className="menu">
                     {
