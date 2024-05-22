@@ -14,9 +14,9 @@ function mainpage(){
                 <p className="main-content-subtitle-line2">наполненная неизведанными </p>
                 <p className="main-content-subtitle-line3">страницами. </p>
                 <Facts/>
-                <Link to="/login">
-                    <button>регистрация</button>
-                </Link>
+                {/*<Link to="/login">*/}
+                {/*    <button>регистрация</button>*/}
+                {/*</Link>*/}
             </div>
         </div>
     )
