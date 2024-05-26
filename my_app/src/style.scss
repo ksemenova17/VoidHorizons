@@ -9,6 +9,14 @@
   font-style: normal;
   color: white;
 }
+
+@font-face {
+  font-family: "serpent";
+  src: local("serpent"),
+  url("./Font/Serpent/serpent.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body{
   //height: 100%;
   //background: linear-gradient(35deg, #ff1d74, #10013e, #000000);
@@ -187,31 +195,31 @@ body{
       .fact {
         margin-top: 40px;
       }
-      button {
-         position: absolute;
-         //display: flex;
-         justify-content: center;
-         align-items: center;
-         margin-top: 40px;
-         //top: 700px;
-         //left: 650px;
-         background-color: transparent;
-         border: 1px solid white;
-         border-radius: 20px;
-         font-weight: 400;
-         font-size: 16px;
-         font-family: "Montserrat", sans-serif;
-         color: white;
-         padding: 0.5rem 1rem;
-         cursor: pointer;
-         box-sizing: border-box;
-         transition: color 0.3s, background-color 0.3s;
-
-         &:hover {
-           background-color: white;
-           color: black;
-         }
-       }
+      //button {
+      //   position: absolute;
+      //   //display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   margin-top: 40px;
+      //   //top: 700px;
+      //   //left: 650px;
+      //   background-color: transparent;
+      //   border: 1px solid white;
+      //   border-radius: 20px;
+      //   font-weight: 400;
+      //   font-size: 16px;
+      //   font-family: "Montserrat", sans-serif;
+      //   color: white;
+      //   padding: 0.5rem 1rem;
+      //   cursor: pointer;
+      //   box-sizing: border-box;
+      //   transition: color 0.3s, background-color 0.3s;
+      //
+      //   &:hover {
+      //     background-color: white;
+      //     color: black;
+      //   }
+      // }
     }
   }
 }
