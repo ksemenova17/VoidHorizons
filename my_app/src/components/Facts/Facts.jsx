@@ -6,7 +6,7 @@ const Facts = () => {
         <div className="info-bar">
             <div className="info-section">88 созвездий</div>
             <div className="divider"></div>
-            <div className="info-section">около 6000 звезд</div>
+            <div className="info-section">около 250 миллиардов звезд</div>
             <div className="divider"></div>
             <div className="info-section">порядка 100 миллиардов галактик</div>
             <div className="divider"></div>
