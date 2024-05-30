@@ -1,0 +1,46 @@
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cookie-content {
+    max-width: 800px;
+    text-align: center;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .cookie-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:first-child {
+          background: linear-gradient(35deg, #ff1d74, #71519c);
+          color: white;
+        }
+
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

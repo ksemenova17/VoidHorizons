@@ -3,6 +3,7 @@ import Facts from "../components/Facts/Facts.jsx";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Earth from '../models/Earth'
+import CookieConsent from '../components/Cookie/CookieConsent.jsx';
 
 function RotatingEarth(props) {
     const ref = useRef();
@@ -34,6 +35,7 @@ function mainpage(){
                 <p className="main-content-subtitle-line2">наполненная неизведанными </p>
                 <p className="main-content-subtitle-line3">страницами. </p>
                 <Facts/>
+                <CookieConsent />
             </div>
         </div>
     )

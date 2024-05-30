@@ -1,11 +1,12 @@
 import React from "react"
 import library from './page/library'
 import profile from './page/profile/profile.jsx'
-import sky from './page/sky'
+import sky from './page/sky/sky.jsx'
 import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import mainpage from "./page/mainpage";
 import login from "./page/auth/login/login.jsx";
+
 
 
 
