@@ -20,3 +20,20 @@
     background-color: #ffffff;
   }
 }
+@media(max-width:768px) {
+  .info-bar {
+    flex-direction: column; /* Устанавливаем вертикальное расположение */
+    align-items: flex-start; /* Выравниваем элементы по началу */
+    padding: 10px 10px; /* Сокращаем внутренние отступы */
+    .info-section {
+      padding: 10px 0; /* Уменьшаем горизонтальные отступы */
+      width: 100%; /* Делаем секции шириной в 100% */
+    }
+    .divider {
+      height: 1px; /* Меняем высоту на ширину */
+      width: 100%; /* Делаем разделитель шириной в 100% */
+      background-color: #ffffff;
+      margin: 10px 0; /* Добавляем отступы между секциями */
+    }
+  }
+}

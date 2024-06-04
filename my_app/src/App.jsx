@@ -1,11 +1,11 @@
 import React from "react"
-import library from './page/library'
-import profile from './page/profile/profile.jsx'
+import Library from './page/library/Library.jsx'
+import Profile from './page/profile/Profile.jsx'
 import sky from './page/sky/sky.jsx'
 import Navbar from './components/Navbar.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import mainpage from "./page/mainpage";
-import login from "./page/auth/login/login.jsx";
+import Mainpage from "./page/Mainpage.jsx";
+import Login from "./page/auth/login/Login.jsx";
 
 
 
@@ -17,11 +17,11 @@ function App() {
                 <div className="container">
                     <Navbar/>
                     <Routes>
-                        <Route path='/' element={mainpage()}/>
-                        <Route path='/library' element={library()}/>
-                        <Route path='/profile' element={profile()}/>
+                        <Route path='/' element={Mainpage()}/>
+                        <Route path='/library' element={Library()}/>
+                        <Route path='/profile' element={<Profile />}/>
                         <Route path='/sky' element={sky()}/>
-                        <Route path='/login' element={login()}/>
+                        <Route path='/login' element={<Login />}/>
                     </Routes>
                 </div>
         </Router>

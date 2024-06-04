@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useRef, useFrame, Suspense} from "react";
+import React, { useRef, Suspense} from "react";
 import Facts from "../components/Facts/Facts.jsx";
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Earth from '../models/Earth'
 import CookieConsent from '../components/Cookie/CookieConsent.jsx';
@@ -9,13 +9,13 @@ function RotatingEarth(props) {
     const ref = useRef();
     useFrame(() => {
         if (ref.current) {
-            ref.current.rotation.y += 0.01; // Вращение модели вокруг оси Y
+            ref.current.rotation.y += 0.001; // Вращение модели вокруг оси Y
         }
     });
     return <Earth ref={ref} {...props} />;
 }
 
-function mainpage(){
+function Mainpage(){
     return (
         <div className="mainpage">
             <div className="canvas-container">
@@ -24,8 +24,7 @@ function mainpage(){
                         <OrbitControls/>
                         <ambientLight intensity={0}/>
                         <directionalLight intensity={3} position={[1, 0, 1]}/>
-                        <Earth position={[0.5, 0.35, 0]} rotation={[12.65, -0.6, 0]} scale={[0.5, 0.5, 0.5]}/>
-                        RotatingEarth position={[0.5, 0.35, 0]} rotation={[12.65, -0.6, 0]} scale={[0.5, 0.5, 0.5]} />
+                        <RotatingEarth position={[0.5, 0.35, 0]} rotation={[12.65, -0.6, 0]} scale={[0.5, 0.5, 0.5]} />
                     </Suspense>
                 </Canvas>
             </div>
@@ -41,4 +40,4 @@ function mainpage(){
     )
 }
 
-export default mainpage;
+export default Mainpage;
