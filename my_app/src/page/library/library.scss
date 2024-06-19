@@ -1,65 +1,541 @@
-.library {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  color: white;
+//body {
+//  width: 100%;
+//  overflow-x: hidden;
+//}
+//.home {
+//  &.destinations {
+//    .container {
+//      display: flex;
+//      flex-direction: column;
+//      padding: 3rem 1rem;
+//      max-width: 1280px;
+//      margin: 0 auto;
+//
+//      @media (min-width: 768px) {
+//        flex-direction: row;
+//        justify-content: space-between;
+//      }
+//    }
+//
+//    .header-section {
+//      display: flex;
+//      flex-direction: column;
+//      align-items: flex-start;
+//      width: 100%;
+//      margin-bottom: 2rem;
+//      padding-top: 70px;
+//      @media(max-width: 768px) {
+//        padding-top: 20px;
+//      }
+//
+//      .title {
+//        color: white;
+//        font-size: 2.5rem;
+//        font-weight: 200;
+//        text-transform: uppercase;
+//        letter-spacing: 0.1em;
+//        padding-bottom: 1rem;
+//        @media(max-width: 768px) {
+//          font-size: 40px;
+//        }
+//
+//        .subtitle {
+//          margin-left: 1.25rem;
+//          font-weight: 700;
+//          @media(max-width: 768px) {
+//            font-size: 30px;
+//          }
+//        }
+//      }
+//
+//      .search-bar {
+//        margin-bottom: 1rem;
+//        width: 100%;
+//        display: flex;
+//        justify-content: flex-start;
+//        color: white;
+//
+//        @media(max-width: 768px) {
+//          width: 100%;
+//        }
+//
+//        input {
+//          width: 70%;
+//          height: 100%;
+//          background: transparent;
+//          outline: none;
+//          border: 2px solid rgba(250, 250, 250, 0.51);
+//          border-radius: 40px;
+//          font-size: 16px;
+//          color: #fff;
+//          padding: 15px 15px 15px 15px;
+//          &::placeholder {
+//            color: rgba(255, 255, 255, 0.78);
+//          }
+//          @media(max-width: 768px) {
+//            width: 100%;
+//          }
+//        }
+//
+//      }
+//
+//      .list {
+//        font-weight: 300;
+//        margin-top: 20px;
+//        margin-bottom: 20px;
+//        font-size: 16px;
+//      }
+//
+//      .constellations-list {
+//        display: flex;
+//        flex-direction: column;
+//        align-items: flex-start;
+//        width: 100%;
+//        margin: 0;
+//        padding: 0;
+//
+//        li {
+//          width: 100%;
+//          list-style: none;
+//
+//          .constellation-button {
+//            text-transform: uppercase;
+//            font-weight: 600;
+//            color: #cccccc;
+//            padding: 0.5rem 0;
+//            width: 100%;
+//            text-align: left;
+//            border: none;
+//            background: none;
+//            cursor: pointer;
+//
+//            &.active {
+//              border-left: 3px solid white;
+//              padding-left: 10px;
+//              color: white;
+//            }
+//          }
+//        }
+//      }
+//    }
+//
+//    .details-section {
+//      width: 100%;
+//      text-align: center;
+//      padding-top: 100px;
+//
+//      @media (min-width: 768px) {
+//        width: 50%;
+//        padding-top: 100px;
+//      }
+//
+//      .constellation-name {
+//        color: white;
+//        font-weight: 700;
+//        font-size: 3rem; // Уменьшенный размер текста
+//        text-transform: uppercase;
+//        letter-spacing: 0.2em;
+//        margin-bottom: 1.25rem;
+//
+//        @media (max-width: 768px) {
+//          font-size: 35px;;
+//        }
+//      }
+//
+//      .constellation-image {
+//        width: 350px;
+//        height: 350px;
+//        border-radius: 50%;
+//        object-fit: cover;
+//        display: block;
+//        margin: 0 auto;
+//      }
+//
+//      .constellation-description {
+//        color: white;
+//        border-bottom: 1px solid #666666;
+//        padding-bottom: 1.25rem;
+//      }
+//
+//      .constellation-info {
+//        display: flex;
+//        justify-content: space-between;
+//        padding-top: 1.25rem;
+//
+//        .info-item {
+//          text-transform: uppercase;
+//          color: #cccccc;
+//          font-size: 1.25rem;
+//
+//          .info-value {
+//            display: block;
+//            font-size: 2rem;
+//            color: white;
+//          }
+//        }
+//      }
+//
+//      .actions {
+//        display: flex;
+//        justify-content: center;
+//        gap: 1rem;
+//        margin-top: 1.5rem;
+//
+//        button {
+//          padding: 1px;
+//          border: none;
+//          background-color: transparent;
+//          color: white;
+//          cursor: pointer;
+//          border-radius: 5px;
+//          font-size: 20px;
+//        }
+//      }
+//
+//      .comments-section {
+//        margin-top: 2rem;
+//        text-align: left;
+//
+//        h3 {
+//          font-size: 1.5rem;
+//          margin-bottom: 1rem;
+//        }
+//
+//        .comment-item {
+//          display: flex;
+//          align-items: flex-start;
+//          margin-bottom: 1rem;
+//
+//          .comment-content {
+//            flex: 1;
+//            padding: 1rem;
+//            border-radius: 5px;
+//            position: relative;
+//
+//            .author-name {
+//              font-weight: bold;
+//              margin-bottom: 0.5rem;
+//            }
+//
+//            .comment-actions {
+//              position: absolute;
+//              top: 0.5rem;
+//              right: 2rem;
+//              display: flex;
+//              gap: 0.5rem;
+//
+//              .icon {
+//                cursor: pointer;
+//                color: #ccc;
+//              }
+//            }
+//          }
+//        }
+//
+//        input {
+//          width: calc(100% - 2rem);
+//          padding: 0.5rem;
+//          margin-bottom: 1rem;
+//          border: 1px solid #ccc;
+//          border-radius: 20px;
+//          background: transparent;
+//          color: white;
+//          &::placeholder {
+//            color: rgba(255, 255, 255, 0.78);
+//          }
+//        }
+//
+//        button {
+//          padding: 0.5rem 1rem;
+//          border: none;
+//          background-color: #e5e5e5;
+//          color: black;
+//          cursor: pointer;
+//          border-radius: 20px;
+//        }
+//      }
+//    }
+//  }
+//}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-weight: 100;
 }
 
-.search-bar {
-  margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.home {
+  &.destinations {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 1rem;
+      max-width: 1280px;
+      margin: 0 auto;
 
-  input {
-    width: 50%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-}
-
-.article-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  .arrow {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 0 20px;
-  }
-
-  .article-detail {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
 
-    .article-info {
+    .header-section {
       display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 2rem;
+      padding-top: 10px;
 
-      div {
+      @media (max-width: 768px) {
+        padding-top: 20px;
+      }
+
+      .title {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding-bottom: 1rem;
+
+        @media (max-width: 768px) {
+          font-size: 40px;
+        }
+
+        .subtitle {
+          margin-left: 1.25rem;
+          font-weight: 700;
+
+          @media (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .search-bar {
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        color: white;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        input {
+          width: 70%;
+          height: 100%;
+          background: transparent;
+          outline: none;
+          border: 2px solid rgba(250, 250, 250, 0.51);
+          border-radius: 40px;
+          font-size: 16px;
+          color: #fff;
+          padding: 15px 15px 15px 15px;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.78);
+          }
+
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .list {
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      .article-list-wrapper {
+        max-height: 500px;
+        overflow-y: auto;
+        width: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(30px);
+        @media(max-width: 768px) {
+          width: 90%;
+          max-height: 300px;
+        }
+      }
+
+      .constellations-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+          width: 100%;
+          list-style: none;
+          gap: 10px;
+          font-weight: 100;
+
+          .constellation-button {
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #cccccc;
+            padding: 0.5rem 0;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            &.active {
+              border-left: 3px solid white;
+              padding-left: 10px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .details-section {
+      width: 100%;
+      text-align: center;
+      padding-top: 100px;
+
+      @media (min-width: 768px) {
+        width: 50%;
+        padding-top: 10px;
+      }
+
+      .constellation-name {
+        color: white;
+        font-weight: 300;
+        font-size: 3rem; // Уменьшенный размер текста
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 1.25rem;
+
+        @media (max-width: 768px) {
+          font-size: 35px;
+        }
+      }
+
+      .constellation-image {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .constellation-description {
+        color: white;
+        border-bottom: 1px solid #666666;
+        padding-bottom: 1.25rem;
+      }
+
+      .constellation-info {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.25rem;
+
+        .info-item {
+          text-transform: uppercase;
+          color: #cccccc;
+          font-size: 1.25rem;
+
+          .info-value {
+            display: block;
+            font-size: 2rem;
+            color: white;
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+        button {
+          padding: 1px;
+          border: none;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 20px;
+        }
+      }
+
+      .comments-section {
+        margin-top: 2rem;
         text-align: left;
 
         h3 {
-          margin-bottom: 5px;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
         }
 
-        p {
-          margin-top: 0;
+        .comment-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+
+          .comment-content {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 5px;
+            position: relative;
+
+            .author-name {
+              font-weight: bold;
+              margin-bottom: 0.5rem;
+            }
+
+            .comment-actions {
+              position: absolute;
+              top: 0.5rem;
+              right: 2rem;
+              display: flex;
+              gap: 0.5rem;
+
+              .icon {
+                cursor: pointer;
+                color: #ccc;
+              }
+            }
+          }
+        }
+
+        input {
+          width: calc(100% - 2rem);
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 20px;
+          background: transparent;
+          color: white;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.78);
+          }
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+          border: none;
+          background-color: #e5e5e5;
+          color: black;
+          cursor: pointer;
+          border-radius: 20px;
         }
       }
     }

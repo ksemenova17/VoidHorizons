@@ -6,13 +6,12 @@
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
 .wrapper {
-    margin-top: 50px;
     position: relative;
     width: 100%;
     max-width: 420px;
@@ -28,7 +27,7 @@ body {
 
     .form-box {
         width: 100%;
-        padding: 40px;
+        padding:20px;
 
         h1 {
             font-size: 36px;
@@ -65,6 +64,13 @@ body {
                 transform: translateY(-50%);
                 font-size: 16px;
                 color: #fff;
+            }
+            .error {
+                position: absolute;
+                gap: 10px;
+                left: 20px;
+                color: #ffffff;
+                font-size: 2px;
             }
         }
 
@@ -107,6 +113,7 @@ body {
             a {
                 color: #fff;
                 text-decoration: underline;
+                padding-left: 10px;
             }
         }
 
@@ -131,14 +138,13 @@ body {
     }
 
     .register {
-        position: absolute;
         transform: translateX(400px);
         transition: none;
     }
 }
 
 .wrapper.active {
-    height: 540px;
+    height: 550px;
 }
 
 .wrapper .form-box.login {

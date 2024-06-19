@@ -29,8 +29,8 @@ const CookieConsent = () => {
     return (
         <div className="cookie-consent">
             <div className="cookie-content">
-                <p>Мы используем файлы куки для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с
-                    нашей <a href="#">политикой использования файлов куки.</a></p>
+                <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с
+                    нашей <a href="/cookie.pdf">политикой использования файлов cookie.</a></p>
                 <div className="cookie-actions">
                     <button onClick={handleAccept}>Принять</button>
                 </div>
