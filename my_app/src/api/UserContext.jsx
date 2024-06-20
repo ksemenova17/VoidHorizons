@@ -1,34 +1,27 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import axiosInstance from './axios';
 
 const UserContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useUserContext = () => useContext(UserContext);
 
 // eslint-disable-next-line react/prop-types
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axiosInstance.get('/api/v1/auth/users/me', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
+            axiosInstance.get('/api/v1/auth/users/me/', {
+                headers: { Authorization: `Bearer ${token}` }
             })
                 .then(response => {
-                    setUser({ ...response.data, auth_token: token });
+                    setUser(response.data);
                 })
                 .catch(error => {
-                    console.error('Ошибка при получении данных пользователя:', error);
-                })
-                .finally(() => {
-                    setLoading(false);
+                    console.error('Ошибка при загрузке данных пользователя:', error);
                 });
-        } else {
-            setLoading(false);
         }
     }, []);
 
@@ -39,7 +32,7 @@ export const UserProvider = ({ children }) => {
 
     return (
         <UserContext.Provider value={{ user, setUser, logout }}>
-            {loading ? <div className="loading-screen">Loading...</div> : children}
+            {children}
         </UserContext.Provider>
     );
 };

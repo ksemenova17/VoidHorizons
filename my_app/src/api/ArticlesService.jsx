@@ -1,67 +1,86 @@
-// import axios from 'axios';
-// const API_URL = 'http://80.78.242.79:8000';
-//
-// class ArticlesService {
-//     getArticles() {
-//         const url = `${API_URL}/articles/`;
-//         return axios.get(url).then(response => response.data);
-//     }
-//     getArticle(pk) {
-//         const url = `${API_URL}/articles/${pk}/`;
-//         return axios.get(url).then(response => response.data);
-//     }
-//     deleteFavorite(articleId) {
-//         const url = `${API_URL}/favorites/${articleId}/`;
-//         return axios.delete(url);
-//     }
-//     addFavorite(articleId) {
-//         const url = `${API_URL}/favorites/`;
-//         return axios.post(url, { id: articleId });
-//     }
-//     addComment(newComment) {
-//         const url = `${API_URL}/comments/`;
-//         return axios.post(url, newComment).then(response => response.data);
-//     }
-//     deleteComment(commentId) {
-//         const url = `${API_URL}/comments/${commentId}/`;
-//         return axios.delete(url);
-//     }
-// }
-//
-// export default new ArticlesService();
+import axios from 'axios';
 
-import axiosInstance from './axios';
+const API_BASE_URL = 'http://80.78.242.79:8000';
 
-class ArticlesService {
-    getArticles() {
-        const url = '/articles/';
-        return axiosInstance.get(url).then(response => response.data);
+// Создаем инстанс axios
+const axiosInstance = axios.create({
+    baseURL: API_BASE_URL,
+});
+
+// Добавляем interceptor для всех запросов
+axiosInstance.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers.Authorization = `Token ${token}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
     }
+);
 
-    getArticle(pk) {
-        const url = `/articles/${pk}/`;
-        return axiosInstance.get(url).then(response => response.data);
-    }
+const getArticles = () => {
+    return axiosInstance.get('/articles/')
+        .then(response => response.data);
+};
 
-    deleteFavorite(articleId) {
-        const url = `/favorites/${articleId}/`;
-        return axiosInstance.delete(url);
-    }
+const getArticleById = (id) => {
+    return axiosInstance.get(`/articles/${id}/`)
+        .then(response => response.data);
+};
 
-    addFavorite(articleId) {
-        const url = `/favorites/`;
-        return axiosInstance.post(url, { id: articleId });
-    }
+const getFavorites = () => {
+    return axiosInstance.get('/favorites/')
+        .then(response => response.data);
+};
 
-    addComment(newComment) {
-        const url = `/comments/`;
-        return axiosInstance.post(url, newComment).then(response => response.data);
-    }
+const addFavorite = (articleId) => {
+    return axiosInstance.post(`/articles/${articleId}/add_to_favorites/`);
+};
 
-    deleteComment(commentId) {
-        const url = `/comments/${commentId}/`;
-        return axiosInstance.delete(url);
-    }
-}
+const deleteFavorite = (articleId) => {
+    return axiosInstance.delete(`/favorites/${articleId}/`);
+};
 
-export default new ArticlesService();
+const getComments = (articleId) => {
+    return axiosInstance.get(`/articles/${articleId}/comments/`)
+        .then(response => response.data);
+};
+
+const addComment = (articleId, comment) => {
+    return axiosInstance.post(`/articles/${articleId}/comments/`, comment)
+        .then(response => response.data);
+};
+
+const deleteComment = (commentId) => {
+    return axiosInstance.delete(`/comments/${commentId}/`);
+};
+
+const updateUserName = (name) => {
+    return axiosInstance.patch('/api/v1/auth/users/me/', { name })
+        .then(response => response.data);
+};
+
+const changePassword = (currentPassword, newPassword) => {
+    return axiosInstance.post('/api/v1/auth/users/set_password/', {
+        new_password: newPassword,
+        current_password: currentPassword
+    }).then(response => response.data);
+
+
+};
+
+export default {
+    getArticles,
+    getArticleById,
+    getFavorites,
+    addFavorite,
+    deleteFavorite,
+    getComments,
+    addComment,
+    deleteComment,
+    updateUserName,
+    changePassword
+};

@@ -20,6 +20,7 @@ function App() {
                     <Navbar/>
                     <Routes>
                         <Route path='/' element={<Mainpage />} />
+                        <Route path="/library/:id" element={<Library />} />
                         <Route path='/library' element={<Library />} />
                         <Route path='/profile' element={
                             <PrivateRoute>

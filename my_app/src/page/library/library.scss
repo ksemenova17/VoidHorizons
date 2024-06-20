@@ -1,263 +1,3 @@
-//body {
-//  width: 100%;
-//  overflow-x: hidden;
-//}
-//.home {
-//  &.destinations {
-//    .container {
-//      display: flex;
-//      flex-direction: column;
-//      padding: 3rem 1rem;
-//      max-width: 1280px;
-//      margin: 0 auto;
-//
-//      @media (min-width: 768px) {
-//        flex-direction: row;
-//        justify-content: space-between;
-//      }
-//    }
-//
-//    .header-section {
-//      display: flex;
-//      flex-direction: column;
-//      align-items: flex-start;
-//      width: 100%;
-//      margin-bottom: 2rem;
-//      padding-top: 70px;
-//      @media(max-width: 768px) {
-//        padding-top: 20px;
-//      }
-//
-//      .title {
-//        color: white;
-//        font-size: 2.5rem;
-//        font-weight: 200;
-//        text-transform: uppercase;
-//        letter-spacing: 0.1em;
-//        padding-bottom: 1rem;
-//        @media(max-width: 768px) {
-//          font-size: 40px;
-//        }
-//
-//        .subtitle {
-//          margin-left: 1.25rem;
-//          font-weight: 700;
-//          @media(max-width: 768px) {
-//            font-size: 30px;
-//          }
-//        }
-//      }
-//
-//      .search-bar {
-//        margin-bottom: 1rem;
-//        width: 100%;
-//        display: flex;
-//        justify-content: flex-start;
-//        color: white;
-//
-//        @media(max-width: 768px) {
-//          width: 100%;
-//        }
-//
-//        input {
-//          width: 70%;
-//          height: 100%;
-//          background: transparent;
-//          outline: none;
-//          border: 2px solid rgba(250, 250, 250, 0.51);
-//          border-radius: 40px;
-//          font-size: 16px;
-//          color: #fff;
-//          padding: 15px 15px 15px 15px;
-//          &::placeholder {
-//            color: rgba(255, 255, 255, 0.78);
-//          }
-//          @media(max-width: 768px) {
-//            width: 100%;
-//          }
-//        }
-//
-//      }
-//
-//      .list {
-//        font-weight: 300;
-//        margin-top: 20px;
-//        margin-bottom: 20px;
-//        font-size: 16px;
-//      }
-//
-//      .constellations-list {
-//        display: flex;
-//        flex-direction: column;
-//        align-items: flex-start;
-//        width: 100%;
-//        margin: 0;
-//        padding: 0;
-//
-//        li {
-//          width: 100%;
-//          list-style: none;
-//
-//          .constellation-button {
-//            text-transform: uppercase;
-//            font-weight: 600;
-//            color: #cccccc;
-//            padding: 0.5rem 0;
-//            width: 100%;
-//            text-align: left;
-//            border: none;
-//            background: none;
-//            cursor: pointer;
-//
-//            &.active {
-//              border-left: 3px solid white;
-//              padding-left: 10px;
-//              color: white;
-//            }
-//          }
-//        }
-//      }
-//    }
-//
-//    .details-section {
-//      width: 100%;
-//      text-align: center;
-//      padding-top: 100px;
-//
-//      @media (min-width: 768px) {
-//        width: 50%;
-//        padding-top: 100px;
-//      }
-//
-//      .constellation-name {
-//        color: white;
-//        font-weight: 700;
-//        font-size: 3rem; // Уменьшенный размер текста
-//        text-transform: uppercase;
-//        letter-spacing: 0.2em;
-//        margin-bottom: 1.25rem;
-//
-//        @media (max-width: 768px) {
-//          font-size: 35px;;
-//        }
-//      }
-//
-//      .constellation-image {
-//        width: 350px;
-//        height: 350px;
-//        border-radius: 50%;
-//        object-fit: cover;
-//        display: block;
-//        margin: 0 auto;
-//      }
-//
-//      .constellation-description {
-//        color: white;
-//        border-bottom: 1px solid #666666;
-//        padding-bottom: 1.25rem;
-//      }
-//
-//      .constellation-info {
-//        display: flex;
-//        justify-content: space-between;
-//        padding-top: 1.25rem;
-//
-//        .info-item {
-//          text-transform: uppercase;
-//          color: #cccccc;
-//          font-size: 1.25rem;
-//
-//          .info-value {
-//            display: block;
-//            font-size: 2rem;
-//            color: white;
-//          }
-//        }
-//      }
-//
-//      .actions {
-//        display: flex;
-//        justify-content: center;
-//        gap: 1rem;
-//        margin-top: 1.5rem;
-//
-//        button {
-//          padding: 1px;
-//          border: none;
-//          background-color: transparent;
-//          color: white;
-//          cursor: pointer;
-//          border-radius: 5px;
-//          font-size: 20px;
-//        }
-//      }
-//
-//      .comments-section {
-//        margin-top: 2rem;
-//        text-align: left;
-//
-//        h3 {
-//          font-size: 1.5rem;
-//          margin-bottom: 1rem;
-//        }
-//
-//        .comment-item {
-//          display: flex;
-//          align-items: flex-start;
-//          margin-bottom: 1rem;
-//
-//          .comment-content {
-//            flex: 1;
-//            padding: 1rem;
-//            border-radius: 5px;
-//            position: relative;
-//
-//            .author-name {
-//              font-weight: bold;
-//              margin-bottom: 0.5rem;
-//            }
-//
-//            .comment-actions {
-//              position: absolute;
-//              top: 0.5rem;
-//              right: 2rem;
-//              display: flex;
-//              gap: 0.5rem;
-//
-//              .icon {
-//                cursor: pointer;
-//                color: #ccc;
-//              }
-//            }
-//          }
-//        }
-//
-//        input {
-//          width: calc(100% - 2rem);
-//          padding: 0.5rem;
-//          margin-bottom: 1rem;
-//          border: 1px solid #ccc;
-//          border-radius: 20px;
-//          background: transparent;
-//          color: white;
-//          &::placeholder {
-//            color: rgba(255, 255, 255, 0.78);
-//          }
-//        }
-//
-//        button {
-//          padding: 0.5rem 1rem;
-//          border: none;
-//          background-color: #e5e5e5;
-//          color: black;
-//          cursor: pointer;
-//          border-radius: 20px;
-//        }
-//      }
-//    }
-//  }
-//}
-
 body {
   width: 100%;
   overflow-x: hidden;
@@ -350,12 +90,13 @@ body {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 16px;
+        list-style: none;
       }
 
       .article-list-wrapper {
-        max-height: 500px;
+        height: 20%;
         overflow-y: auto;
-        width: 50%;
+        width: 80%;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px;
         padding: 10px;
@@ -365,37 +106,42 @@ body {
           width: 90%;
           max-height: 300px;
         }
-      }
 
-      .constellations-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-        li {
+        .constellations-list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           width: 100%;
-          list-style: none;
-          gap: 10px;
-          font-weight: 100;
+          margin: 0;
+          padding: 0;
 
-          .constellation-button {
-            text-transform: uppercase;
-            font-weight: 400;
-            color: #cccccc;
-            padding: 0.5rem 0;
-            width: 100%;
-            text-align: left;
-            border: none;
-            background: none;
-            cursor: pointer;
+          .article-item {
+            margin-bottom: 5px;
 
-            &.active {
-              border-left: 3px solid white;
-              padding-left: 10px;
-              color: white;
+            .constellation-button {
+              text-transform: uppercase;
+              font-weight: 400;
+              color: #cccccc;
+              padding: 10px;
+              width: 100%;
+              text-align: left;
+              border: none;
+              background: none;
+              cursor: pointer;
+              display: block;
+              transition: background 0.3s, color 0.3s;
+
+              &.active {
+                border-left: 3px solid white;
+                padding-left: 10px;
+                color: white;
+                background-color: #333;
+              }
+
+              &:hover {
+                color: white;
+                background-color: #444;
+              }
             }
           }
         }
@@ -408,14 +154,14 @@ body {
       padding-top: 100px;
 
       @media (min-width: 768px) {
-        width: 50%;
+        width: 150%;
         padding-top: 10px;
       }
 
-      .constellation-name {
+      .article-name {
         color: white;
         font-weight: 300;
-        font-size: 3rem; // Уменьшенный размер текста
+        font-size: 3rem;
         text-transform: uppercase;
         letter-spacing: 0.2em;
         margin-bottom: 1.25rem;
@@ -425,19 +171,25 @@ body {
         }
       }
 
-      .constellation-image {
-        width: 350px;
-        height: 350px;
-        border-radius: 50%;
+      .article-image {
+        width: 300px;
+        height: 300px;
         object-fit: cover;
         display: block;
         margin: 0 auto;
+        gap: 10px;
       }
 
-      .constellation-description {
+      .article-description {
         color: white;
         border-bottom: 1px solid #666666;
         padding-bottom: 1.25rem;
+        text-align: justify;
+        margin-bottom: 1em;
+        line-height: 1.6;
+        .p{
+
+        }
       }
 
       .constellation-info {
@@ -475,7 +227,7 @@ body {
         }
       }
 
-      .comments-section {
+      .comments-section-wrapper {
         margin-top: 2rem;
         text-align: left;
 
